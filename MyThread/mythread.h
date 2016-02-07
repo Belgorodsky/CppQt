@@ -9,6 +9,10 @@ class MyThread : public QThread
 public:
     MyThread();
     void run();
+    void setStop(bool needStop);
+    bool isStoped() const;
+private:
+    bool _stop;
 };
 
 #endif // MYTHREAD_H
